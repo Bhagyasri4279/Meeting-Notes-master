@@ -7,7 +7,7 @@
     <mat-form-field class="emp-list">
         <mat-chip-list #chipList>
           <mat-chip *ngFor="let emp of Employees" [selectable]="selectable"
-                   [removable]="removable" (removed)="emp">
+                   [removable]="removable" (removed)="remove(emp)">
             {{emp.name}}
             <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
           </mat-chip>
